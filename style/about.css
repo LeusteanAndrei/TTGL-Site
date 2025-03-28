@@ -1,0 +1,323 @@
+@font-face {
+    font-family: 'Greyspark';
+    src: local('Greyspark Sans Regular'), local('Greyspark-Sans-Regular'),
+        url('GreysparkSansRegular.woff2') format('woff2'),
+        url('GreysparkSansRegular.woff') format('woff'),
+        url('GreysparkSansRegular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+header nav {
+    background-color: #d90411;
+    height: 10vh;
+}
+
+header button {
+    background-color: #d90411;
+    border: none;
+    color: white;
+    font-family: 'Greyspark';
+    font-size: 8vh;
+    cursor: pointer;
+}
+
+header div {
+    display: none;
+    z-index: 1;
+    position: absolute;
+    /* margin-top: 2vh;
+    width:15vw;
+    background-color: #d90411; */
+}
+
+footer {
+    height: 5vh;
+    width: 100vw;
+    background-color: #d90411;
+}
+
+header button:hover {
+    background-color: #e13742;
+}
+
+header div:hover {
+    display: block;
+    display: flex;
+    flex-direction: column;
+}
+
+header div a:hover {
+    background-color: #e13742;
+}
+
+header div a {
+    text-decoration: none;
+    font-family: 'Greyspark';
+    font-size: 6vh;
+    color: white;
+    width: 30vh;
+    padding: 3%;
+    background-color: #d90411;
+
+}
+
+header button:hover~div {
+    display: block;
+    display: flex;
+    flex-direction: column;
+}
+
+#Background_context,
+#Story,
+#Trivia {
+    width: 90vw;
+    margin-left: 5vw;
+    margin-top: 3vh;
+}
+
+#Background_context strong::before {
+    content: "I. ";
+    font-family: 'Greyspark';
+    font-size: 6vh;
+}
+
+#Background_context strong,
+#Story strong,
+#Trivia strong {
+    font-family: "Greyspark";
+    font-size: 5vh;
+    border-bottom: 2vh solid black;
+}
+
+
+#Background_context img:nth-child(2) {
+
+    max-width: max(10vw, 10vh);
+    float: right;
+    margin: 1vw;
+}
+
+#Background_context a img {
+    max-width: max(15vw, 15vh);
+    float: left;
+    cursor: pointer;
+    margin: 1vw;
+
+
+}
+
+#Background_context .text {
+    background-color: #d90411;
+    border-radius: 10px;
+    padding: 1%;
+    margin-top: 3vh;
+    color: white;
+}
+
+p {
+    font-size: max(1.5vw, 2vh);
+}
+
+#EvaOP:target {
+    display: inline-block;
+    position: absolute;
+    animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+    0% {
+
+        left: 0vw;
+        opacity: 0;
+    }
+
+    100% {
+        left: 15vw;
+        opacity: 1;
+    }
+}
+
+#EvaOP {
+    position: relative;
+    display: none;
+    right: 15vw;
+    width: 70vw;
+}
+
+#EvaOP video {
+
+    width: 70vw;
+}
+
+#EvaOP a {
+    text-decoration: none;
+    background-color: aliceblue;
+    color: black;
+    padding: 1%;
+    font-size: medium;
+}
+
+#Story strong::before {
+    content: "II. ";
+    font-family: 'Greyspark';
+    font-size: 6vh;
+}
+
+#Story img:nth-of-type(odd) {
+    max-width: max(10vw, 10vh);
+    float: right;
+    margin: 1vw;
+    border-radius: 10px;
+}
+
+
+
+#Background_context .text:hover {
+
+    animation: fade_color 1s ease-in-out;
+    background-color: #571519;
+}
+
+#Story p:hover {
+    animation: fade_color 1s ease-in-out;
+    background-color: #571519;
+}
+
+@keyframes fade_color {
+    0% {
+        background-color: #d90411;
+    }
+
+    100% {
+        background-color: #571519;
+    }
+}
+
+
+#Story img:nth-of-type(even) {
+    max-width: max(17vw, 17vh);
+    float: left;
+    margin: 1vw;
+    border-radius: 10px;
+}
+
+#Story img:nth-of-type(3) {
+
+    max-width: max(17vw, 17vh);
+}
+
+
+#Trivia ul {
+    border-radius: 15px;
+    padding: 3%;
+}
+
+#Trivia strong::before {
+    content: "III. ";
+    font-family: 'Greyspark';
+    font-size: 6vh;
+}
+
+
+
+@media (min-width:600px) {
+    #Trivia ul:hover {
+
+        animation: fade_color 1s ease-in-out;
+        background-color: #571519;
+    }
+    #Story p {
+        background-color: #d90411;
+        border-radius: 15px;
+        color: white;
+        padding: 1%;
+    }
+}
+
+@media (max-width: 600px) {
+    #Trivia ul:hover {
+        padding: 6%;
+        animation: fade_color 1s ease-in-out;
+        background-color: #571519;
+    }
+    #Story p {
+        background-color: #d90411;
+        border-radius: 15px;
+        color: white;
+        padding: 4%;
+    }
+}
+
+#Trivia .list {
+    margin-top: 5vh;
+    background-color: #d90411;
+    border-radius: 15px;
+    color: white;
+    padding: 1%;
+    font-size: max(1.5vw, 2vh);
+    margin-bottom: 4vh;
+}
+
+
+
+#TtglOP:target {
+    display: inline-block;
+    position: absolute;
+    animation: fade 1s ease-in-out;
+}
+
+#Trivia ul a {
+    color: white;
+}
+
+
+#TtglOP {
+    position: relative;
+    display: none;
+    right: 15vw;
+    width: 70vw;
+}
+
+#TtglOP video {
+
+    width: 70vw;
+}
+
+#TtglOP a {
+    text-decoration: none;
+    background-color: aliceblue;
+    color: black;
+    padding: 1%;
+    font-size: medium;
+}
+
+#Libera a {
+    text-decoration: none;
+    padding: 1%;
+    font-size: medium;
+}
+
+#Libera {
+    margin-top: 4vh;
+    display: none;
+}
+
+#Libera:target {
+    animation: fade 1s ease-in-out;
+    display: block;
+}
+
+summary {
+    border-radius: 15px;    
+}
+
+summary:hover {
+    animation: fade_color 1s ease-in-out;
+    background-color: #571519;
+}

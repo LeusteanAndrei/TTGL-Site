@@ -1,0 +1,510 @@
+@font-face {
+    font-family: 'Archivo';
+    src: url('ArchivoBlack-Regular.woff2') format('woff2'),
+        url('ArchivoBlack-Regular.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+} 
+
+header img
+{
+    height:5vh;
+    margin-left: 90vw;
+    max-height: 3vw;
+}
+
+
+
+body
+{
+    margin: 0;
+}
+
+header{
+    height:3vh;
+    max-height: 3vw;
+    width:100%;
+    margin: auto;
+    position: relative;
+    z-index: 100;
+}
+
+ul
+{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+
+/* item styling */
+
+.slider .list .item
+{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+}
+.slider
+{
+    margin-top: -5vh;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+.slider .item >img
+{
+    width:100%;
+    height: 100%;
+    filter: blur(0.5rem) brightness(75%); 
+    object-fit: cover;
+    /* z-index: 1; */
+    /* width:40vw;
+    margin-left: 50vw;
+    margin-top: ;
+    z-index: 10;
+    position: absolute; */
+}
+
+
+
+
+.slider .item .template
+{
+    z-index: 1;
+    position: absolute;
+    height: 80vh;
+    width:80vw;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    margin-left: 10vw;
+}
+
+.slider .item .template img
+{
+    width: 40vw;
+}
+
+.content
+{
+    display: flex;
+    flex-direction: column;
+    gap:0.5vw;
+}
+
+.slider .item .content .title
+{
+    font-family: 'Archivo';
+    font-size: 6vw;
+}
+.slider .item .content .description
+{
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+
+button
+{
+    font-size: large;
+    padding: 2%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    text-decoration: none;
+}
+
+.trailer
+{
+    background-color: rgb(64, 2, 2);
+    border: rgb(64, 2, 2) 2px solid;
+}
+
+.trailer:hover
+{
+    animation: changecolor 0.5s linear;
+    background-color: transparent;
+}
+
+.trailer:hover a
+{
+    animation: changetextcolor 0.5s linear;
+    color:rgb(64, 2, 2);
+}
+
+@keyframes changetextcolor
+{
+    0%
+    {
+        color:white;
+    }
+    100%
+    {
+        color:rgb(64, 2, 2);
+    }
+}
+
+@keyframes changecolor
+{
+    0%
+    {
+        background-color: rgb(64, 2, 2);
+    }
+    100%
+    {
+        background-color: transparent;
+    }
+}
+
+.trailer a
+{
+    color:white;
+    display:inline-block;
+    width:100%;
+    height:100%;
+}
+
+.site
+{
+    background-color: transparent;
+    border: rgb(64, 2, 2) 2px solid;
+}
+.site a
+{
+    color:rgb(64, 2, 2);
+    display:inline-block;
+    width:100%;
+    height:100%;
+}
+
+.site:hover
+{
+    animation: changecolor2 0.5s linear;
+    background-color: rgb(64, 2, 2);
+    border: rgb(64, 2, 2) 2px solid;
+}
+
+.site:hover a
+{
+    animation: changetextcolor2 0.5s linear;
+    color:white;
+}
+
+@keyframes changetextcolor2
+{
+    0%
+    {
+        color:rgb(64, 2, 2);
+    }
+    100%
+    {
+        color:white;
+    }
+}
+
+@keyframes changecolor2
+{
+    0%
+    {
+        background-color: transparent;
+        border: rgb(64, 2, 2) 2px solid;
+    }
+    100%
+    {
+        background-color: rgb(64, 2, 2);
+        border: rgb(64, 2, 2) 2px solid;
+    }
+}
+
+
+
+
+
+.listThumbnails 
+{
+    position: absolute;
+    width: max-content;
+    z-index: 101;
+    display: flex;
+    margin-top: 5vh;
+    flex-direction: column;
+}
+
+.listThumbnails .itemT
+{
+    height: 10vh;
+    width: 25vh;
+    position: relative;
+    transform: translateX(-15vh);
+    transition: 1s;
+}
+
+
+.ListThumbnailButtons
+{
+    position: absolute;
+    z-index: 105;
+    display: flex;
+    margin-top: 5vh;
+    flex-direction: column;
+}
+
+.thumbnailButton
+{
+    height: 10vh;
+    width: 25vh;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    transform: translateX(-15vh);
+    transition: 1s;
+    border:none;
+}
+
+
+
+
+
+.itemT img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.itemT .titleT
+{
+    position: absolute;
+    font-family: 'Archivo';
+    text-emphasis: bold;
+    font-size: small;
+    bottom: 0.5vw;
+    left:0.5vw; 
+} 
+
+/* arrows */
+
+.arrows
+{
+    position: absolute;
+    z-index: 110;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top:80vh;
+    margin-left: 15vh;
+}
+.arrows button
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+    border: black solid 1px;
+}
+.arrows button:hover{
+    background-color: black;
+    border-color: white;
+    color: white;
+}
+
+.loading.startReverse
+{
+    background-color: black;
+    filter: opacity(50%);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 104;
+}
+
+.timer.startReverse
+{
+    width:100vw;
+    height:3vh;
+    margin-top: 40vh;
+    background-color: brown;
+    animation:countDown2 2s linear;
+}
+@keyframes countDown2{
+    0%
+    {
+        width:0vw
+    }
+    100%
+    {
+        width: 100vw;
+    }
+}
+
+.loading.start
+{
+    background-color: black;
+    filter: opacity(50%);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 104;
+}
+
+.timer.start
+{
+    width:100vw;
+    height:3vh;
+    margin-top: 40vh;
+    background-color: brown;
+    animation:countDown 3s linear;
+}
+@keyframes countDown{
+    100%
+    {
+        width: 0vw;
+    }
+}
+
+
+/* animations */
+
+.itemT.out
+{
+    animation:out 1s linear;
+    transform: translateX(-25vh);
+}
+@keyframes out
+{
+    0%
+    {
+        transform: translateX(-15vh);
+    }
+    100%
+    {
+        transform: translateX(-25vh);
+    }
+}
+
+.itemT.shortIn
+{
+    animation:shortin 1s linear;
+}
+
+.itemT.in
+{
+    animation:in 2s linear;
+}
+@keyframes in
+{
+    0%
+    {
+        transform:translateX(-25vh);
+    }
+    100%
+    {
+        transform: translateX(-15vh);
+    }
+}
+@keyframes shortin
+{
+    0%
+    {
+        transform:translateX(-25vh);
+    }
+    100%
+    {
+        transform: translateX(-10vh);
+    }
+}
+
+
+
+.item.start >img
+{
+    animation: bigImg 1s linear;
+}
+
+.item.start .template
+{
+    opacity: 0;
+}
+
+@keyframes bigImg
+{
+    0%
+    {
+        transform: translateX(-100vw);
+    }
+    100%
+    {
+        transform: translateX(0vw);
+    }
+}
+
+.template.start .content div,.template.start .content button,.template.start img
+{
+    animation: contentIn  1s linear ;
+}
+
+@keyframes contentIn {
+    0%
+    {
+        filter: blur(100px);
+        transform:translateY(10vh);
+    }
+    100%
+    {
+        filter: blur(0px);
+        transform:translateY(0vh);
+    }
+}
+
+
+.item.out .template
+{
+    opacity: 0;
+}
+.item.out >img
+{
+    animation: bigImgout 1s linear;
+}
+
+@keyframes bigImgout {
+    0%
+    {
+        transform: translateX(0);
+    }
+    100%
+    {
+        transform: translateX(100vw);
+    }
+}
+
+.template.out .content div,.template.out .content button,.template.out img
+{
+    animation: contentOut  1s linear ;
+}
+@keyframes contentOut {
+    0%
+    {
+        filter: blur(0px);
+        transform:translateY(0vh);
+    }
+    100%
+    {
+        filter: blur(100px);
+        transform:translateY(-10vh);
+    }
+}

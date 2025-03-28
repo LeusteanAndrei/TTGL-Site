@@ -1,0 +1,170 @@
+body {
+    /* background-image: url("simonbg.jpg");
+    background-size: 100vw auto; */
+    overflow-x: hidden;
+    background-color: black;
+}
+
+header
+{
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: 'pencil';
+    src: url('fredericka-the-great.regular-webfont.woff2') format('woff2'),
+        url('fredericka-the-great.regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+
+.title {
+    position: fixed;
+    text-align: left;
+    color: white;
+    font-family: "pencil";
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-size: min(3vw, 5vh);
+    z-index: -1;
+}
+
+
+.filler_img
+{
+    opacity: 0;
+    max-height: 80vh;
+    max-width: 100%;
+    margin-left: 10vw;
+}
+
+.mainimg {
+    position: fixed;
+    left: unset;
+    max-height: 80vh;
+    max-width: 100%;    
+    margin-left: 10vw;
+    z-index: -1;
+}
+
+
+main {
+    width: 100vw;
+    border-top: 0.5vw solid white;
+}
+
+@media (min-width:500px)
+{
+    .characters {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            justify-items: center;
+            background-color: black;
+            width: 100%;
+        }
+    
+    
+        .container {
+            font-family: 'pencil';
+            color: aliceblue;
+            width: 20vw;
+            height: 35vw;
+        }
+        .container .scrollable {
+            max-height: 25vw;
+            overflow-y: auto;
+        
+        }
+        .scrollable p {
+            font-size: 1.3vw;
+        }
+        .container .scrollable img {
+
+            width: 18vw;
+        }
+        .container .dropdown {
+            position: absolute;
+            display: none;
+            width: 20vw;
+            height: auto;
+        }
+        .container .name {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+            font-size: 2vw;
+            border-bottom: 0.1vw solid white;
+            justify-content: center;
+        }
+}
+
+@media (max-width:499px)
+{
+    
+    .characters {
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        justify-items: center;
+        background-color: black;
+        width: 100%;
+    }
+    .container .scrollable img {
+
+        width: 38vw;
+    }
+    .container .dropdown {
+        position: absolute;
+        display: none;
+        width: 40vw;
+        height: auto;
+    }
+    
+    .container {
+        font-family: 'pencil';
+        color: aliceblue;
+        width: 40vw;
+        height: 70vw;
+    }
+    .container .scrollable {
+        max-height: 53vw;
+        overflow-y: auto;
+    
+    }
+    .scrollable p {
+        font-size: 3vw;
+    }
+    .container .name {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        font-size: 4vw;
+        border-bottom: 0.1vw solid white;
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+.container .name:hover+img {
+    display: block;
+}
+
+
+
+
+footer
+{
+    width: 100vw;
+    color: white;
+}

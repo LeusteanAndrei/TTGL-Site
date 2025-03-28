@@ -1,0 +1,237 @@
+
+
+.d1
+{
+    width:  8em;
+    height: 11em;
+    clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+    background-color: #c4a526 ;
+    margin-left: 0.7em;
+    position: absolute;
+    /* position: absolute;
+    width: 0.2em;
+    z-index: 1;
+    height: 0   ;
+    border-left: 3.5em solid transparent; 
+    border-right: 3.5em solid transparent; 
+    border-bottom: 10em solid #c4a526; 
+    margin-left: 0.5em; */
+}
+
+
+.pointy
+{
+    position: relative;
+    /* border:#505050 1em solid */
+}
+.handle1
+{
+    position: relative;
+}
+
+.d2
+{
+    width: 9em;
+    height: 3em; 
+    position: absolute; 
+    background-color: #505050;
+    border-width: 0.2em;
+    border-style: solid;
+    border-color: #3e342b;
+    border-radius: 0.5em;
+}
+.handle1 .highlight1
+{
+    position: absolute;
+    width: 4em;
+    height:0.4em;
+    background-color: white;
+    margin-left: 0.2em;
+    margin-top: 0.2em;
+    border-radius: 1em;
+}
+.handle1 .highlight2
+{
+    position: absolute;
+    width: 1em;
+    height: 3em;
+    margin-top: 0.2em;
+    
+    margin-left: 1em;
+    background-color: white;
+    
+}
+.handle1 .shadow
+{
+    position: relative;
+    width: 3em;
+    height:3em;
+    margin-top: 0.2em;
+    margin-left: 6.2em;
+    background-color: #464646;
+    border-radius: 0.2em;
+}
+
+
+.pointy .shadow1{
+    position: absolute;
+    width:  8em;
+    height: 11em;
+    clip-path: polygon(70% 100%, 50% 0%, 100% 100%);
+    background-color: #8a7836;
+    margin-left: 0.7em;
+}
+
+.d3 {
+    position: absolute;
+    width:  8em;
+    height: 11em;
+    clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+    
+    margin-left: 0.7em;
+    background: repeating-linear-gradient(
+      -30deg, 
+      #9a8228 0, 
+      #9a8228 0.5em, 
+      rgba(255, 255, 255, 00) 0.5em, 
+      rgba(255, 255, 255, 0) 1.7em    
+      ); 
+  }
+
+
+.pointy .highlight1
+{
+    position: absolute;
+    width:  8em;
+    height: 11em;
+    clip-path: polygon(0% 100%, 50% 0%, 10% 100%);
+    background-color: #8dd56f ;
+    margin-left: 0.7em;
+}
+.pointy .highlight2
+{
+    position: absolute;
+    width:  8em;
+    height: 11em;
+    clip-path: polygon(20% 70%, 40% 25%, 41% 25%, 22% 70%);
+    background-color: white ;
+    border-radius: 1em;
+    margin-left: 0.7em;
+}
+
+.pointy .shadow2
+{
+    position: relative;
+    width:  8em;
+    height: 11em;
+    clip-path: polygon(70% 100%, 50% 0%, 100% 100%);
+    background: repeating-linear-gradient(
+      -30deg, 
+      #72612d 0, 
+      #72612d 0.5em, 
+      rgba(255, 255, 255, 00) 0.5em, 
+      rgba(255, 255, 255, 0) 1.7em    
+      ); 
+    margin-left: 0.7em;
+}
+
+
+.handle2
+{
+    position:relative;
+}
+
+.handle2 .bigbox
+{
+    position: absolute;
+    width:  8em;
+    height: 4em;
+    margin-top: 1em;
+    border-width: 0.2em;
+    border-style: solid;
+    border-color: #3e342b;
+    background-color:#505050 ;
+    margin-left: 0.7em;
+    border-radius: 0% 0% 50% 50%;
+}
+.handle2 .smallbox
+{
+    position: absolute;
+    width:  4em;
+    height: 5.5em;
+    margin-left: 4.7em;  
+    border-width: 0.2em;
+    border-style: solid;
+    border-color: #3e342b;
+    background-color:#464646 ;
+    
+    border-radius: 0% 0% 50% 0%;
+}
+.handle2 .gap1
+{
+    position: absolute;
+    width: 3em;
+    height: 3em;
+    border-width: 0.2em;
+    border-style: solid;
+    border-color: #3e342b;
+    background-color: white;
+    margin-left:2.9em;
+    border-radius: 0% 0% 50% 50%;
+}
+
+.handle2 .gap2
+{
+    position: relative;
+    height:0.8em;
+    width:5em;
+    background-color: white;
+    margin-top: 0.2em;
+}
+
+.handle2 .highlight1
+{
+    position: absolute;
+    width: 0.3em;
+    height:1.5em;
+    background-color: white;
+    margin-top: 2em;
+    margin-left: 0.9em;
+    border-radius: 20% 20% 20% 50%;
+}
+
+
+.drill
+{
+    display: flex;
+    flex-direction: column;
+    width: 9em; 
+    margin-left: 10em;
+    transform: rotate(90deg);   
+}
+.animation .rescale
+{
+    transform: scale(0.25);
+}
+.animation
+{  
+    width:100vw;
+    max-height: 100vw;
+    margin-top: -5em;
+    z-index: 0;
+    margin-bottom: -7em;
+    animation: animate 8s linear infinite ;
+    
+}
+
+@keyframes animate
+{
+    0% {
+            transform: translateX(-55vw);
+        }
+    100% {
+            transform: translateX(115vw);
+        }
+}  
+
+
